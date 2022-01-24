@@ -15,18 +15,27 @@ void main() {
     ),
   );
 }
-
-class DicePage extends StatelessWidget {
+class DicePage extends StatefulWidget {
+  //const DicePage({Key? key}) : super(key: key);
 
   @override
+  _DicePageState createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
+  @override
   Widget build(BuildContext context) {
-    var  leftDicenumber = 3;
+    int leftDicenumber = 1;
+
     return Center(
       child: Row(
         children: [
           Expanded(
             child: MaterialButton(onPressed: (){
-              print('Left Button Got Pressed.');
+              setState(() {
+                leftDicenumber= 5;
+              });
+
             },
               child: Image.asset('images/dice$leftDicenumber.png'),//String Interpolation
             ),
@@ -43,3 +52,9 @@ class DicePage extends StatelessWidget {
     );
   }
 }
+//
+//
+// class DicePage extends StatelessWidget {
+//
+//
+// }
