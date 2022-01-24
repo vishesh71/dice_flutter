@@ -23,9 +23,10 @@ class DicePage extends StatefulWidget {
 }
 
 class _DicePageState extends State<DicePage> {
+  int leftDicenumber = 1;
   @override
   Widget build(BuildContext context) {
-    int leftDicenumber = 1;
+
 
     return Center(
       child: Row(
